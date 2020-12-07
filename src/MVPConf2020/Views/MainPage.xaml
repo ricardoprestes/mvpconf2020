@@ -3,24 +3,41 @@
     x:Class="MVPConf2020.Views.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MVPConf2020.Controls"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     Title="Demo"
     iOS:Page.UseSafeArea="True"
     BackgroundColor="#f0f0f0">
 
-    <StackLayout Padding="16">
+    <StackLayout Padding="16" Spacing="16">
         <Frame
             Padding="24"
             BackgroundColor="#DA4145"
-            CornerRadius="0">
+            CornerRadius="16"
+            HasShadow="False">
             <Label
                 FontSize="36"
                 HorizontalTextAlignment="Center"
                 Text="Welcome to MVP Conf 2020!"
                 TextColor="White" />
         </Frame>
+        <Frame
+            Padding="24"
+            BackgroundColor="White"
+            CornerRadius="16"
+            HasShadow="False">
+            <StackLayout>
+                <controls:TextFieldView
+                    Title="Nome"
+                    PlaceHolder="Entre com seu nome"
+                    Required="True" />
 
-
+                <controls:TextFieldView
+                    Title="Endereço"
+                    PlaceHolder="Informe seu endereço"
+                    Required="False" />
+            </StackLayout>
+        </Frame>
     </StackLayout>
 
 </ContentPage>

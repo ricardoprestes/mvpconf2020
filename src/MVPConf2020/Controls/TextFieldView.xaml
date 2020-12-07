@@ -3,11 +3,14 @@
     x:Class="MVPConf2020.Controls.TextFieldView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Grid ColumnDefinitions="auto,20" RowDefinitions="30,30">
-        <Label Text="Teste" />
-        <Label
-            Grid.Column="1"
-            Text="*"
-            TextColor="Red" />
-    </Grid>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="LblTitle" Text="Teste" />
+            <Label
+                x:Name="LblRequired"
+                Text="*"
+                TextColor="Red" />
+        </StackLayout>
+        <Entry x:Name="TxtText" />
+    </StackLayout>
 </ContentView>
