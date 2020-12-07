@@ -19,6 +19,8 @@
                 Text="Welcome to MVP Conf 2020!"
                 TextColor="White" />
         </Frame>
+
+
     </StackLayout>
 
 </ContentPage>
